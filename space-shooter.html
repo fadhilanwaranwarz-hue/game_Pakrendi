@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>FADHIL_ANWAR — Space Shooter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stage">
+  <canvas id="game" width="480" height="720"></canvas>
+  <div id="scan"></div>
+
+  <div id="hud">
+    <div>
+      <div class="label">Skor</div>
+      <div class="value" id="scoreVal">0</div>
+      <div class="label" style="margin-top:4px">Tertinggi <span id="highScoreVal" style="color:var(--amber)">0</span></div>
+    </div>
+    <div style="text-align:center">
+      <div class="label">Level</div>
+      <div class="value" id="waveVal">1</div>
+    </div>
+    <div style="text-align:right">
+      <div class="label">Nyawa</div>
+      <div class="value" id="lives">▲▲▲</div>
+      <div class="label" style="margin-top:4px">Darah</div>
+      <div id="healthContainer">
+        <div id="healthBar" style="width:100%"></div>
+      </div>
+      <div id="healthText">100%</div>
+      <div class="label" style="margin-top:4px">Bom <span id="bombStatus" class="ready">SIAP</span></div>
+    </div>
+  </div>
+
+  <div id="levelBanner"></div>
+
+  <div id="overlay">
+    <h1 id="overlayTitle">SIGNAL RUNNER</h1>
+    <h4 id="overlayTitle">By:Fadhil_Anwar</h4>
+    <div class="sub" id="overlaySub">
+      Kau adalah kurir sinyal terakhir yang keluar dari stasiun Kaia-9.<br>
+      Tembus gelombang pencegat dan kirim <b>SOS</b> sebelum sinyalmu padam.<br><br>
+      <b>Panah / WASD</b> gerak — <b>Spasi</b> tembak — <b>B</b> jatuhkan bom.<br>
+      Di ponsel pakai tombol di layar. Setiap akhir level, hadapi <b>bos monster</b>!
+    </div>
+    <button id="startBtn">Mulai Misi</button>
+  </div>
+
+  <div id="touchControls">
+    <div class="pad" id="movePad"></div>
+    <div id="actionBtns">
+      <button class="bombBtn" id="bombBtn">BOM</button>
+      <button class="fireBtn" id="fireBtn">TEMBAK</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
